@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/12 07:47:30 by alsaeed           #+#    #+#              #
-#    Updated: 2024/04/15 18:00:20 by alsaeed          ###   ########.fr        #
+#    Created: 2024/04/13 12:15:53 by alsaeed           #+#    #+#              #
+#    Updated: 2024/04/16 08:14:13 by alsaeed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,12 +20,12 @@ BOLD_GREEN 	= \033[1;32m
 BOLD_RED 	= \033[1;31m
 RESET 		= \033[0m
 
-SRCS 		= Zombie.cpp zombieHorde.cpp
+SRCS 		= Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJS_DIR 	= objs
 OBJS 		= $(SRCS:%.cpp=$(OBJS_DIR)/%.o)
 
-NAME 		= zombieHorde
+NAME 		= unnecessary_violence
 
 all: $(NAME)
 
@@ -35,18 +35,18 @@ $(OBJS_DIR)/%.o: %.cpp
 
 $(NAME): $(OBJS) main.cpp
 	@$(CXX) $(CXXFLAGS) $(OBJS) main.cpp -o $(NAME)
-	@echo "zombieHorde compiled: $(BOLD_GREEN)OK$(RESET)"
+	@echo "unnecessary_violence compiled: $(BOLD_GREEN)OK$(RESET)"
 
 clean:
 	@if [ -e $(OBJS_DIR) ]; then \
 		rm -rf $(OBJS_DIR); \
-		echo "zombieHorde clean: $(BOLD_RED)OK$(RESET)"; \
+		echo "unnecessary_violence clean: $(BOLD_RED)OK$(RESET)"; \
 	fi
 
 fclean: clean
 	@if [ -e $(NAME) ]; then \
 		rm -rf $(NAME); \
-		echo "zombieHorde full-clean: $(BOLD_RED)OK$(RESET)"; \
+		echo "unnecessary_violence full-clean: $(BOLD_RED)OK$(RESET)"; \
 	fi
 
 re: fclean all

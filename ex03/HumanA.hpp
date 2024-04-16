@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 07:47:31 by alsaeed           #+#    #+#             */
-/*   Updated: 2024/04/13 11:58:13 by alsaeed          ###   ########.fr       */
+/*   Created: 2024/04/13 12:17:24 by alsaeed           #+#    #+#             */
+/*   Updated: 2024/04/15 18:24:51 by alsaeed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include <iostream>
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-int	main( void ) {
+# include <iostream>
+# include <string>
+# include "Weapon.hpp"
 
-	int		N = 5;
-	Zombie	*Horde = zombieHorde( N, "zombieHorde" );
+class	HumanA {
 
-	for ( int i = 0; i < N; i++ ) {
-		
-		Horde[i].announce();
-	}
+	private:
 
-	delete[] Horde;
+		std::string	_name;
+		Weapon&		_weapon;
 
-	return 0;
-}
+	public:
+
+		HumanA( std::string name, Weapon &weapon );
+		~HumanA( void );
+
+		void	setName( std::string name );
+		void	setWeapon( Weapon &weapon );
+		void	attack( void ) const;
+
+};
+
+#endif

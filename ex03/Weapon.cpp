@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 07:47:31 by alsaeed           #+#    #+#             */
-/*   Updated: 2024/04/13 11:58:13 by alsaeed          ###   ########.fr       */
+/*   Created: 2024/04/13 12:17:36 by alsaeed           #+#    #+#             */
+/*   Updated: 2024/04/15 14:41:23 by alsaeed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include <iostream>
+#include "Weapon.hpp"
 
-int	main( void ) {
+Weapon::Weapon( void ) : _type( "fist" ) {
 
-	int		N = 5;
-	Zombie	*Horde = zombieHorde( N, "zombieHorde" );
+	return;
+}
 
-	for ( int i = 0; i < N; i++ ) {
-		
-		Horde[i].announce();
-	}
+Weapon::Weapon(const std::string& type) : _type(type) {
 
-	delete[] Horde;
+	return;
+}
 
-	return 0;
+Weapon::~Weapon( void ) {
+	
+	return;
+}
+
+const std::string&	Weapon::getType( void ) const {
+
+    return _type;
+}
+
+void	Weapon::setType(const std::string& type) {
+
+    this->_type = type;
+	
+	return;
 }

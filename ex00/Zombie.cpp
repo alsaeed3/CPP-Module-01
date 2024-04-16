@@ -6,7 +6,7 @@
 /*   By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 03:43:36 by alsaeed           #+#    #+#             */
-/*   Updated: 2024/04/10 03:50:45 by alsaeed          ###   ########.fr       */
+/*   Updated: 2024/04/13 11:39:56 by alsaeed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 Zombie::Zombie( std::string name ) : _name( name ) {
 	
-	std::cout << std::endl;
 	std::cout << BOLD_GREEN << this->_name << RESET <<" has been created" << std::endl;
 	
 	return;
