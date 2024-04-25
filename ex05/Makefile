@@ -6,12 +6,12 @@
 #    By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/17 09:05:37 by alsaeed           #+#    #+#              #
-#    Updated: 2024/04/17 09:41:36 by alsaeed          ###   ########.fr        #
+#    Updated: 2024/04/18 07:01:21 by alsaeed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX 		= g++
-CXXFLAGS 	= -Wall -Werror -Wextra #-std=c++98
+CXXFLAGS 	= -Wall -Werror -Wextra -std=c++98
 
 # colors #
 GREEN 		= \033[32m
