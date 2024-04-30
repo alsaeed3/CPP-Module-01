@@ -6,7 +6,7 @@
 /*   By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 03:43:28 by alsaeed           #+#    #+#             */
-/*   Updated: 2024/04/10 03:56:16 by alsaeed          ###   ########.fr       */
+/*   Updated: 2024/04/30 17:56:06 by alsaeed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ int main ( void ) {
 
 	/* Zombie on the Heap Memory using randomChump function */
 	randomChump("randomChump");
-	
-	std::cout << std::endl;
 	
 	return 0;
 }
